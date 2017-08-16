@@ -18,7 +18,7 @@
             "feed": "",
             "link": ""
         }, 
-        "The Wire": {
+        "Most Viewed": {
             "feed": "",
             "link": ""
         }
@@ -117,7 +117,7 @@
 
                     <section class="aap-news">
                         
-                      <h2>EDITOR'S PICK</h2>
+                      <h2 style="font-size:1.125rem;">EDITOR'S PICK</h2>
 
 
                         {# <a href ="{{ sections['Breaking News'].link }}"><h2>BREAKING NEWS</h2></a> #}
@@ -188,13 +188,25 @@
             <div class="col-md-3 col-sm-12">
                 <aside class="right-border">
                     <section class="row top-stories-sidebar">
-                        <h2>MOST VIEWED</h2>
+                        {% if sections['Most Viewed'].feed.articles|length > 0 %}
 
-                        {% if popularArticles|length > 0 %}
-                            {% for article in popularArticles %}
-                                {{this.render('partials/_sidebar-article.twig', {article: article}) | raw}}
-                            {% endfor %}
-                        {% endif %}
+                    <section class="aap-news">
+                        
+                      <h2 style="font-size:1.125rem;">MOST VIEWED</h2>
+
+
+                        {# <a href ="{{ sections['Breaking News'].link }}"><h2>BREAKING NEWS</h2></a> #}
+                        {# <p>FROM <img src="{{networkData.templatePath}}/static/images/aap.jpg"></p> #}
+
+                        {% for i in 0..10 %}
+                            {% if sections['EMost Viewed'].feed.articles[i] %}
+                                {{this.render('partials/_single-article.twig', {article: sections['Most Viewed'].feed.articles[i], containerClass: 'col-sm-6 col-md-12'}) | raw}}
+                            {% endif %}
+                        {% endfor %}
+
+                        <a href="{{ sections['Most Viewed'].link }}" class="viewmore">VIEW MORE</a>
+                    </section>
+                    {% endif %}
 
                     </section>
                 </aside>
