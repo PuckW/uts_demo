@@ -8710,7 +8710,7 @@ a.card {
         background-image: url(../icons/vimeo-blk.svg); }
 
 .card-topstories a.card {
-  height: auto;
+  height: 90px;
   font-size: 13px;
   font-weight: 500;
   color: #1a1818;
