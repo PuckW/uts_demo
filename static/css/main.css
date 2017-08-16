@@ -8962,7 +8962,12 @@ a.card {
     color: #1a1818;
     padding-top: 280px;
     padding-left: 40px;
-    padding-right: 40px; }
+    padding-right: 40px;
+    background: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.9));
+    /* background-position-y: 10px; */
+    background-size: 100% 200px;
+    background-repeat: no-repeat;
+    background-position: bottom; }
     @media screen and (max-width: 620px) {
       .card-md a.card .content {
         padding: 180px 20px 10px 20px; } }

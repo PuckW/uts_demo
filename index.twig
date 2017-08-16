@@ -152,13 +152,11 @@
 
     {% if sections['Features'].feed.articles|length > 0 %}
     <div class="container">
-        <a href="{{ sections['Features'].link }}"><h5 class="ser-h5">THE WIRE</h5></a>
+        <a href="{{ sections['Features'].link }}"><h5 class="ser-h5">FEATURES</h5></a>
         <section class="content-block ser">
             <div class="row">
                 <div class="col-sm-12 col-md-4">
-                    <a href="http://www.2ser.com/players" onClick="window.open(this.href, 'child', 'scrollbars,width=750,height=430'); return false">
-                        <img src="{{networkData.templatePath}}/static/images/jasso.png" alt="ALT">
-                    </a>
+                        <img src="{{networkData.templatePath}}/static/images/jasso.png">
                 </div><!--col-sm-4-->
                 
                 {% for i in 0..1 %}
