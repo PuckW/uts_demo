@@ -21,6 +21,10 @@
         "Most Viewed": {
             "feed": "",
             "link": ""
+        }, 
+        "Features": {
+            "feed": "",
+            "link": ""
         }
     }
 %}
@@ -146,20 +150,20 @@
 
 
 
-    {% if sections['The Wire'].feed.articles|length > 0 %}
+    {% if sections['Features'].feed.articles|length > 0 %}
     <div class="container">
-        <a href="{{ sections['The Wire'].link }}"><h5 class="ser-h5">THE WIRE</h5></a>
+        <a href="{{ sections['Features'].link }}"><h5 class="ser-h5">THE WIRE</h5></a>
         <section class="content-block ser">
             <div class="row">
                 <div class="col-sm-12 col-md-4">
                     <a href="http://www.2ser.com/players" onClick="window.open(this.href, 'child', 'scrollbars,width=750,height=430'); return false">
-                        <img src="{{networkData.templatePath}}/static/images/2SER_Desktop.jpg" alt="ALT">
+                        <img src="{{networkData.templatePath}}/static/images/jasso.png" alt="ALT">
                     </a>
                 </div><!--col-sm-4-->
                 
                 {% for i in 0..1 %}
-                    {% if sections['The Wire'].feed.articles[i] %}        
-                        {{this.render('partials/_2ser-article.twig', {article: sections['The Wire'].feed.articles[i], 'position': (i+1), containerClass: 'col-sm-6 col-md-4'}) | raw}}
+                    {% if sections['Features'].feed.articles[i] %}        
+                        {{this.render('partials/_2ser-article.twig', {article: sections['Features'].feed.articles[i], 'position': (i+1), containerClass: 'col-sm-6 col-md-4'}) | raw}}
                     {% endif %}                   
                 {% endfor %}
             </div><!--row-->
@@ -192,7 +196,7 @@
 
                     <section class="aap-news">
                         
-                      <h2 style="font-size:1.125rem;">MOST VIEWED</h2>
+                      <h2 style="font-size:1.125rem;">MOST VIEWED STORIES</h2>
 
 
                         {# <a href ="{{ sections['Breaking News'].link }}"><h2>BREAKING NEWS</h2></a> #}
