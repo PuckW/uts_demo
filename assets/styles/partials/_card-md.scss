@@ -9,6 +9,13 @@
         overflow: hidden;
         margin-bottom: 30px;
         color:#fefefe;
+        article {
+
+
+            figure{
+                    margin: 6px 0 0 0;
+            }
+        }
 
         @media screen and (max-width: $mobile-break){
             height: auto;

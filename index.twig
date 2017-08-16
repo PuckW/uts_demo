@@ -14,7 +14,7 @@
 
 
 {% set sections =  {
-        "Breaking News": {
+        "Editors Pick": {
             "feed": "",
             "link": ""
         }, 
@@ -113,13 +113,26 @@
                 <aside class="left-border">
                              
                     <section class="row top-stories-sidebar">
-                        <h2>BREAKING NEWS</h2>
+                        {% if sections['Editors Pick'].feed.articles|length > 0 %}
 
-                        {% if popularArticles|length > 0 %}
-                            {% for article in popularArticles %}
-                                {{this.render('partials/_sidebar-article.twig', {article: article}) | raw}}
-                            {% endfor %}
-                        {% endif %}
+                    <section class="aap-news">
+                        
+                        <a href ="{{ sections['Editors Pick'].link }}" class="hidden-xs"><h2>EDITOR'S PICK</h2></a>
+                        <a href ="{{ sections['Editors Pick'].link }}" class="hidden-sm hidden-md hidden-lg"><h2>EDITOR'S<br /> PICK</h2></a>
+
+
+                        {# <a href ="{{ sections['Breaking News'].link }}"><h2>BREAKING NEWS</h2></a> #}
+                        {# <p>FROM <img src="{{networkData.templatePath}}/static/images/aap.jpg"></p> #}
+
+                        {% for i in 0..10 %}
+                            {% if sections['Editors Pick'].feed.articles[i] %}
+                                {{this.render('partials/_single-article.twig', {article: sections['Editors Pick'].feed.articles[i], containerClass: 'col-sm-6 col-md-12'}) | raw}}
+                            {% endif %}
+                        {% endfor %}
+
+                        <a href="{{ sections['Editors Pick'].link }}" class="viewmore">VIEW MORE</a>
+                    </section>
+                    {% endif %}
 
                     </section>
                 
