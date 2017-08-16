@@ -8993,6 +8993,8 @@ a.card {
       margin-bottom: 9px;
       margin-top: 0;
       color: #fefefe; }
+    .card-md a.card .content h3 {
+      color: #fefefe; }
     .card-md a.card .content p {
       order: 4;
       display: none; }
