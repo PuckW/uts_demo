@@ -132,9 +132,9 @@
                     <span class="category">{{social.source}}</span>
                     <span class="article-icon"></span>
                     <time datetime="2016-11-16">{{_AppHelper.getDateTimeBasedOnTimezone(social.publishDate,'d M Y')}}</time>         
-                    <h3 class="socialContent is-truncated" id="updateSocial{{article.socialId}}" data-update="0">
+                    <h2 class="socialContent is-truncated" id="updateSocial{{article.socialId}}" data-update="0">
                         {{ social.content | preg_replace('/(@.+?) /', '<span style="color:#0099cc">$1</span> ') 
-                                         | raw }}</h3>
+                                         | raw }}</h2>
 
                     <span class="author">{{ (social.source == _SocialFeed.getSocialArticleSourceIsTwitter()) ? '@' : ''}}{{ social.user['name'] | lower }}</span>
 
