@@ -11,7 +11,12 @@
         color:#fefefe;
         figure {
                     margin: 6px 0 0 0;
+                    background: none;
+                    &:after {
+                        background: none;
+                       }
         }
+
         
 
         @media screen and (max-width: $mobile-break){

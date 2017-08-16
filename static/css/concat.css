@@ -8948,7 +8948,10 @@ a.card {
     width: 100%;
     height: 100%; }
   .card-md a.card figure {
-    margin: 6px 0 0 0; }
+    margin: 6px 0 0 0;
+    background: none; }
+    .card-md a.card figure:after {
+      background: none; }
   @media screen and (max-width: 620px) {
     .card-md a.card {
       height: auto; } }
