@@ -191,37 +191,20 @@
 
             <div class="col-md-3 col-sm-12">
                 <aside class="left-border">
-                    
+                             
+                    <section class="row top-stories-sidebar">
+                        <h2>MOST VIEWED</h2>
 
-                    {% if sections['Breaking News'].feed.articles|length > 0 %}
+                        {% if popularArticles|length > 0 %}
+                            {% for article in popularArticles %}
+                                {{this.render('partials/_sidebar-article.twig', {article: article}) | raw}}
+                            {% endfor %}
+                        {% endif %}
 
-                    <section class="aap-news">
-
-                        <a href ="{{ sections['Breaking News'].link }}"><h2>AAP<br />BREAKING<br />NEWS</h2></a>
-                        {% for i in 0..4 %}
-                            {% if sections['Breaking News'].feed.articles[i] %}
-                                {{this.render('partials/_sidebar-article.twig', {article: sections['Breaking News'].feed.articles[i]}) | raw}}
-                            {% endif %}
-                        {% endfor %}
-
-                        <a href="{{ sidePanelLink }}" class="viewmore">VIEW MORE</a>
                     </section>
-                    {% endif %}
+                
 
-                    <section class="subscribe">
-                        <h3>Get Central News direct to your inbox</h3>
-                        <form method="get" id="subscribe-form" action="#">
-                            <label for="header-search" class="assistive-text sr-only">Search</label>
-                            <div class="input-group subscribe-group">
-                                <input type="email" class="field form-control" name="email" placeholder="Email" required="">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-default" type="submit" id="searchsubmit">
-                                        <span class="icon-submit icon"></span>
-                                    </button>
-                                </span>
-                            </div>
-                        </form>
-                    </section>
+
                 </aside>
             </div>
         </div>

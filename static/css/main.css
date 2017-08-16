@@ -8978,7 +8978,8 @@ a.card {
       height: auto;
       max-height: 70px;
       margin-bottom: 9px;
-      margin-top: 0; }
+      margin-top: 0;
+      color: #fefefe; }
     .card-md a.card .content p {
       order: 4;
       display: none; }
@@ -11351,7 +11352,8 @@ body.screen {
           margin: 0; }
 
 .top-stories-sidebar {
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  margin-left: 0; }
   .top-stories-sidebar:before, .top-stories-sidebar:after {
     content: " ";
     display: table; }
