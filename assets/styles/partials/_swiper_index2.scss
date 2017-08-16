@@ -154,8 +154,8 @@
             }
 
             .author {
-                background-color: #ffff00;
-                color: #1a1818;
+                background-color: #000000;
+                color: #fefefe;
                 @media screen and (max-width: $mobile-break) {
                     font-size: rem(8);
                     font-weight:900;
@@ -167,6 +167,7 @@
                 font-weight: 900;
                 margin: 0;
                 max-width: 51%; /* ~619/1200 */
+                display:none;
 
                 @media screen and (max-width: 1260px) {
                     max-width: 80%;

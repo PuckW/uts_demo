@@ -27,7 +27,7 @@
             position: relative;
             z-index: 1;
             text-align: center;
-            color: #fefefe;
+            color: #1a1818;
             padding-top: 280px;
             padding-left: 40px;
             padding-right: 40px;
@@ -40,7 +40,7 @@
                 position: absolute;
                 right: 0;
                 top: 0;
-                background-color: $brand-yellow;
+                background-color: #fefefe;
                 color: #1a1818;
                 // @media screen and (max-width: $mobile-break){
                 //     font-size: rem(8);
@@ -106,7 +106,7 @@
 
 
         &.without__image {
-            background: rgba(34, 31, 32, .8);
+            background: #4a494a;
         }
 
         &.social {

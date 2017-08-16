@@ -1,21 +1,21 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: sketchtool 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
-    <title>BC29DFBC-B549-4741-9AD1-EB051A4B0893</title>
-    <desc>Created with sketchtool.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="28" viewBox="0 0 28 28">
     <defs>
-        <polygon id="path-1" points="9.99995 20 0 20 0 0 9.99995 0 19.9999 0 19.9999 20"></polygon>
+        <filter id="a" width="170%" height="170%" x="-35%" y="-25%" filterUnits="objectBoundingBox">
+            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"/>
+            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <path id="b" d="M10 20H0V0h20v20z"/>
     </defs>
-    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Header---Mini" transform="translate(-1745.000000, -5.000000)">
-            <g id="Tumblr" transform="translate(1745.000000, 5.000000)">
-                <mask id="mask-2" fill="white">
-                    <use xlink:href="#path-1"></use>
-                </mask>
-                <g id="Clip-2"></g>
-                <path d="M9.9999,20 C15.5229,20 19.9999,15.523 19.9999,10 C19.9999,4.477 15.5229,0 9.9999,0 C4.4769,0 -0.0001,4.477 -0.0001,10 C-0.0001,15.523 4.4769,20 9.9999,20" id="Fill-1" fill="#FFFF00" mask="url(#mask-2)"></path>
-                <path d="M13.4957,13.296 C12.9127,13.679 12.3387,13.87 11.7727,13.87 C11.4397,13.87 11.1567,13.787 10.9237,13.621 C10.7407,13.521 10.6077,13.371 10.5247,13.171 C10.4577,13.021 10.4247,12.597 10.4247,11.898 L10.4247,8.951 L13.1207,8.951 L13.1207,7.153 L10.4247,7.153 L10.4247,4.257 L8.8017,4.257 C8.7517,4.79 8.6267,5.273 8.4267,5.705 C8.2267,6.105 7.9687,6.438 7.6527,6.704 C7.3367,6.97 6.9537,7.178 6.5037,7.328 L6.5037,8.951 L7.7527,8.951 L7.7527,12.971 C7.7527,13.521 7.8107,13.92 7.9277,14.17 C8.0107,14.436 8.2017,14.702 8.5017,14.969 C8.7347,15.185 9.0757,15.377 9.5257,15.543 C9.9587,15.676 10.4157,15.743 10.8987,15.743 C11.3487,15.743 11.7727,15.693 12.1727,15.593 C12.6547,15.477 13.0957,15.31 13.4957,15.094 L13.4957,13.296 Z" id="Fill-4" fill="#221F20" mask="url(#mask-2)"></path>
-            </g>
-        </g>
+    <g fill="none" fill-rule="evenodd" filter="url(#a)" transform="translate(4 2)">
+        <mask id="c" fill="#fff">
+            <use xlink:href="#b"/>
+        </mask>
+        <path fill="#BDEBE5" d="M10 20c5.523 0 10-4.477 10-10S15.523 0 10 0 0 4.477 0 10s4.477 10 10 10" mask="url(#c)"/>
+        <path fill="#231F20" d="M13.496 13.296c-.583.383-1.157.574-1.723.574-.333 0-.616-.083-.85-.249a.88.88 0 0 1-.398-.45c-.067-.15-.1-.574-.1-1.273V8.951h2.696V7.153h-2.696V4.257H8.802a4.401 4.401 0 0 1-.375 1.448c-.2.4-.458.733-.774.999a3.462 3.462 0 0 1-1.15.624v1.623h1.25v4.02c0 .55.058.949.175 1.199.083.266.274.532.574.799.233.216.574.408 1.024.574.433.133.89.2 1.373.2.45 0 .874-.05 1.274-.15a5.46 5.46 0 0 0 1.323-.499v-1.798z" mask="url(#c)"/>
     </g>
 </svg>

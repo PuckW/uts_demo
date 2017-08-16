@@ -64,7 +64,6 @@
 
                 <div class="content">
                     <span class="category">{{article.label}}</span>
-                    <time datetime="2016-11-16">{{_AppHelper.getDateTimeBasedOnTimezone(publishDate,'d M Y')}}</time>
                     <h2>{{ articleTitle }}</h2>
                     <span class="author">
                         {{ article.createdBy['displayName'] }}
@@ -73,6 +72,7 @@
                         {% endfor %}
 
                     </span>
+                    <time datetime="2016-11-16">{{_AppHelper.getDateTimeBasedOnTimezone(publishDate,'d M Y')}}</time>
                     <p class="excerpt">{{ article.excerpt | raw }}</p>
 
                 </div>

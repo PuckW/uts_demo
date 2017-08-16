@@ -21,6 +21,7 @@
         .navbar-brand{
             padding: 0;
             width: 100%;
+            display: none;
             img{
                 width: 100%;
                 max-width: 115px;
@@ -31,13 +32,16 @@
         }
 
         .footer-links {
-            margin-top:35px;
+            margin-top:35px; 
+            margin-left: 65%;
 
         }
 
 
         .social-links{
             margin-top: 148px;
+             margin-left: 75%;
+
 
             @media screen and (max-width: $mobile-break){
                 margin-top: 0;
@@ -63,10 +67,10 @@
     }
 
     .footer-signup{
-        background-color: #ffff00;
-        padding-top: 11px;
-        padding-bottom: 13px;
-        height: 50px;
+        background-color: #bdece6;
+        
+        height: 20px;
+       
         @media screen and (max-width: $sm-break){
             height: auto;
             text-align: center;

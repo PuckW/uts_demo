@@ -7466,8 +7466,8 @@ time {
         padding-bottom: 0; }
   .top-bar .social-links .icon {
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     margin-left: 5px; }
   @media screen and (max-width: 620px) {
     .top-bar {
@@ -7530,7 +7530,8 @@ body.Screen .top-bar {
     transition-timing-function: ease-in;
     -webkit-transition-duration: 0.5s;
     transition-duration: 0.5s;
-    transition: height 0.5s ease; }
+    transition: height 0.5s ease;
+    display: none; }
     .site-header .navbar-brand img {
       max-height: 100%;
       height: 80px;
@@ -8364,13 +8365,13 @@ a.card {
     flex-direction: column;
     justify-content: flex-start; }
     a.card .content .category {
-      background-color: #231f20;
       color: #fefefe;
       font-weight: 900;
       font-size: 0.75rem;
       text-transform: uppercase;
       padding: 4px 5px;
-      margin-bottom: 17px; }
+      margin-bottom: 17px;
+      border-top: 6px solid #bdece6; }
       @media screen and (max-width: 769px) {
         a.card .content .category {
           padding: 9px 15px; } }
@@ -8583,7 +8584,7 @@ a.card {
     position: absolute;
     top: 0;
     right: 0;
-    background-color: #ffff00;
+    background-color: #fefefe;
     color: #1a1818; }
   .card-sm a.card article .content h2 {
     color: black;
@@ -8636,7 +8637,7 @@ a.card {
       max-height: 185px; }
   .card-sm a.card.twitter {
     color: black;
-    background-color: #ffff00;
+    background-color: #bdece6;
     border-bottom: none;
     padding-left: 0;
     padding-right: 0; }
@@ -8953,7 +8954,7 @@ a.card {
     position: relative;
     z-index: 1;
     text-align: center;
-    color: #fefefe;
+    color: #1a1818;
     padding-top: 280px;
     padding-left: 40px;
     padding-right: 40px; }
@@ -8964,7 +8965,7 @@ a.card {
       position: absolute;
       right: 0;
       top: 0;
-      background-color: #ffff00;
+      background-color: #fefefe;
       color: #1a1818; }
     .card-md a.card .content .article-icon {
       order: 1;
@@ -8991,7 +8992,7 @@ a.card {
   .card-md a.card .share {
     display: none; }
   .card-md a.card.without__image {
-    background: rgba(34, 31, 32, 0.8); }
+    background: #4a494a; }
   .card-md a.card.social .content {
     padding-top: 190px; }
     @media screen and (max-width: 620px) {
@@ -9094,8 +9095,8 @@ a.card {
           max-height: 85px;
           font-size: 1.75rem; } }
     .card-lg a.card .content .author {
-      background-color: #ffff00;
-      color: #1a1818; }
+      background-color: #1a1818;
+      color: #fefefe; }
       @media screen and (max-width: 769px) {
         .card-lg a.card .content .author {
           padding: 9px 12px;
@@ -10391,8 +10392,8 @@ button.swiper-pagination-bullet {
             font-size: 0.5rem;
             margin-left: 0; } }
       .featured-carousel-index2 .card .content .author {
-        background-color: #ffff00;
-        color: #1a1818; }
+        background-color: #000000;
+        color: #fefefe; }
         @media screen and (max-width: 620px) {
           .featured-carousel-index2 .card .content .author {
             font-size: 0.5rem;
@@ -10402,7 +10403,8 @@ button.swiper-pagination-bullet {
         font-weight: 900;
         margin: 0;
         max-width: 51%;
-        /* ~619/1200 */ }
+        /* ~619/1200 */
+        display: none; }
         @media screen and (max-width: 1260px) {
           .featured-carousel-index2 .card .content p {
             max-width: 80%; } }
@@ -12246,7 +12248,8 @@ body.search #masthead {
         margin-bottom: 10px; }
     .site-footer .footer-content .navbar-brand {
       padding: 0;
-      width: 100%; }
+      width: 100%;
+      display: none; }
       .site-footer .footer-content .navbar-brand img {
         width: 100%;
         max-width: 115px; }
@@ -12254,9 +12257,11 @@ body.search #masthead {
           .site-footer .footer-content .navbar-brand img {
             max-width: 60px; } }
     .site-footer .footer-content .footer-links {
-      margin-top: 35px; }
+      margin-top: 35px;
+      margin-left: 65%; }
     .site-footer .footer-content .social-links {
-      margin-top: 148px; }
+      margin-top: 148px;
+      margin-left: 75%; }
       @media screen and (max-width: 620px) {
         .site-footer .footer-content .social-links {
           margin-top: 0;
@@ -12273,10 +12278,8 @@ body.search #masthead {
       color: white;
       font-size: 1em; }
   .site-footer .footer-signup {
-    background-color: #ffff00;
-    padding-top: 11px;
-    padding-bottom: 13px;
-    height: 50px; }
+    background-color: #bdece6;
+    height: 20px; }
     @media screen and (max-width: 769px) {
       .site-footer .footer-signup {
         height: auto;

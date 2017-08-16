@@ -53,13 +53,13 @@ a.card{
         justify-content: flex-start;
 
         .category{
-            background-color: #231f20;
             color: #fefefe;
             font-weight: 900;
             font-size: rem(12); //12px
             text-transform: uppercase;
             padding: 4px 5px;
             margin-bottom: 17px;
+            border-top: 6px solid #bdece6;
 
             @media screen and (max-width: $sm-break){
                 padding:9px 15px;
