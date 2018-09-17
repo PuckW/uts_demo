@@ -11378,9 +11378,7 @@ body.screen {
     clear: both; }
   @media screen and (max-width: 992px) {
     .top-stories-sidebar {
-      padding-left: 0;
-      margin-left: -15px;
-      margin-right: -15px; } }
+      padding-left: 0; } }
   @media screen and (max-width: 620px) {
     .top-stories-sidebar {
       padding-left: 0; } }
