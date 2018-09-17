@@ -14,11 +14,7 @@
 
 
 {% set sections =  {
-        "Editors Pick": {
-            "feed": "",
-            "link": ""
-        }, 
-        "Most Viewed": {
+        "Social": {
             "feed": "",
             "link": ""
         }, 
@@ -35,7 +31,7 @@
         {% if blog.title | lower == key | lower %}
             {% set sections = sections | merge({
                 (key) : {
-                    'feed': _Blog.getBlogFeed({'limit': 5, 'offset': 0, 'blogid':blog.guid}),
+                    'feed': _Blog.getBlogFeed({'limit': 6, 'offset': 0, 'blogid':blog.guid}),
                     'link' : blog.link
                     }
                 }) %}
@@ -117,25 +113,19 @@
                 <aside class="left-border">
                              
                     <section class="row top-stories-sidebar">
-                        {% if sections['Editors Pick'].feed.articles|length > 0 %}
-
-                    <section class="aap-news">
                         
-                      <h2 style="font-size:1.125rem;">EDITOR'S PICK</h2>
 
-
-                        {# <a href ="{{ sections['Breaking News'].link }}"><h2>BREAKING NEWS</h2></a> #}
-                        {# <p>FROM <img src="{{networkData.templatePath}}/static/images/aap.jpg"></p> #}
-
-                        {% for i in 0..10 %}
-                            {% if sections['Editors Pick'].feed.articles[i] %}
-                                {{this.render('partials/_single-article.twig', {article: sections['Editors Pick'].feed.articles[i], containerClass: 'col-sm-6 col-md-12'}) | raw}}
-                            {% endif %}
-                        {% endfor %}
-
-                        <a href="{{ sections['Editors Pick'].link }}" class="viewmore">VIEW MORE</a>
-                    </section>
-                    {% endif %}
+                        <section class="aap-news">
+                            
+                          <h2 style="font-size:1.125rem;margin-top:0;">EDITORS PICKS</h2>
+                            {% for i in 0..5 %}
+                                {% if articles[articleCount] %}
+                                    {{this.render('partials/_single-article.twig', {article: articles[articleCount], 'position': (articleCount+1), containerClass: 'col-sm-6 col-md-12'}) | raw}}
+                                    {% set articleCount = articleCount + 1 %}
+                                {% endif %}
+                            {% endfor %}
+                        </section>
+                   
 
                     </section>
                 
@@ -155,11 +145,11 @@
         <a href="{{ sections['Features'].link }}"><h5 class="ser-h5">FEATURES</h5></a>
         <section class="content-block ser">
             <div class="row">
-                <div class="col-sm-12 col-md-4">
+                {# <div class="col-sm-12 col-md-4">
                         <img src="{{networkData.templatePath}}/static/images/jasso.png">
-                </div><!--col-sm-4-->
+                </div><!--col-sm-4--> #}
                 
-                {% for i in 0..1 %}
+                {% for i in 0..2 %}
                     {% if sections['Features'].feed.articles[i] %}        
                         {{this.render('partials/_2ser-article.twig', {article: sections['Features'].feed.articles[i], 'position': (i+1), containerClass: 'col-sm-6 col-md-4'}) | raw}}
                     {% endif %}                   
@@ -190,23 +180,23 @@
             <div class="col-md-3 col-sm-12">
                 <aside class="right-border">
                     <section class="row top-stories-sidebar">
-                        {% if sections['Most Viewed'].feed.articles|length > 0 %}
+                        {% if sections['Social'].feed.articles|length > 0 %}
 
                     <section class="aap-news">
                         
-                      <h2 style="font-size:1.125rem;">MOST VIEWED STORIES</h2>
+                      <h2 style="font-size:1.125rem;margin-top:0;">SOCIAL FEED</h2>
 
 
                         {# <a href ="{{ sections['Breaking News'].link }}"><h2>BREAKING NEWS</h2></a> #}
                         {# <p>FROM <img src="{{networkData.templatePath}}/static/images/aap.jpg"></p> #}
 
-                        {% for i in 0..10 %}
-                            {% if sections['Most Viewed'].feed.articles[i] %}
-                                {{this.render('partials/_single-article.twig', {article: sections['Most Viewed'].feed.articles[i], containerClass: 'col-sm-6 col-md-12'}) | raw}}
+                        {% for i in 0..5 %}
+                            {% if sections['Social'].feed.articles[i] %}
+                                {{this.render('partials/_single-article.twig', {article: sections['Social'].feed.articles[i], containerClass: 'col-sm-6 col-md-12'}) | raw}}
                             {% endif %}
                         {% endfor %}
 
-                        <a href="{{ sections['Most Viewed'].link }}" class="viewmore">VIEW MORE</a>
+                        <a href="{{ sections['Social'].link }}" class="viewmore">VIEW MORE</a>
                     </section>
                     {% endif %}
 

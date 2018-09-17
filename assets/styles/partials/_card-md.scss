@@ -15,6 +15,7 @@
 
         }
         > article {
+            height: 100%;
         figure {
             &:after{
                 background: none;
@@ -49,7 +50,7 @@
             background-size: 100% 200px;
             background-repeat: no-repeat;
             background-position: bottom;
-
+            height: 100%;
             @media screen and (max-width: $mobile-break){
                 padding: 180px 20px 10px 20px;
             }

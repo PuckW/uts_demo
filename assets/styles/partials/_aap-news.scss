@@ -1,6 +1,6 @@
 .aap-news{
     padding-left: 30px;
-    margin-bottom: 15px;
+    // margin-bottom: 15px;
     
     &:before,
     &:after,{
@@ -99,11 +99,13 @@
                     display:none;
                 }
 
-                h2{
+                h2,h3{
                     font-size: rem(16);
                     font-weight: 700;
                     margin-top: 5px;
                     height:60px;
+                    overflow: hidden;
+                    color:black !important;
                     @media screen and (max-width: $mobile-break){
                         font-size: rem(18);
                         height:auto;

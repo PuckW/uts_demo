@@ -8949,8 +8949,10 @@ a.card {
   .card-md a.card figure {
     margin: 6px 0 0 0;
     background: none; }
-  .card-md a.card > article figure:after {
-    background: none; }
+  .card-md a.card > article {
+    height: 100%; }
+    .card-md a.card > article figure:after {
+      background: none; }
   @media screen and (max-width: 620px) {
     .card-md a.card {
       height: auto; } }
@@ -8969,7 +8971,8 @@ a.card {
     /* background-position-y: 10px; */
     background-size: 100% 200px;
     background-repeat: no-repeat;
-    background-position: bottom; }
+    background-position: bottom;
+    height: 100%; }
     @media screen and (max-width: 620px) {
       .card-md a.card .content {
         padding: 180px 20px 10px 20px; } }
@@ -11169,8 +11172,7 @@ body.screen {
           overflow: hidden; }
 
 .aap-news {
-  padding-left: 30px;
-  margin-bottom: 15px; }
+  padding-left: 30px; }
   .aap-news:before, .aap-news:after {
     content: " ";
     display: table; }
@@ -11234,13 +11236,15 @@ body.screen {
         display: none; }
       .aap-news .card article .content .author {
         display: none; }
-      .aap-news .card article .content h2 {
+      .aap-news .card article .content h2, .aap-news .card article .content h3 {
         font-size: 1rem;
         font-weight: 700;
         margin-top: 5px;
-        height: 60px; }
+        height: 60px;
+        overflow: hidden;
+        color: black !important; }
         @media screen and (max-width: 620px) {
-          .aap-news .card article .content h2 {
+          .aap-news .card article .content h2, .aap-news .card article .content h3 {
             font-size: 1.125rem;
             height: auto;
             max-height: 65px; } }
@@ -11366,7 +11370,6 @@ body.screen {
           margin: 0; }
 
 .top-stories-sidebar {
-  margin-bottom: 15px;
   margin-left: 0; }
   .top-stories-sidebar:before, .top-stories-sidebar:after {
     content: " ";
@@ -11656,8 +11659,6 @@ body.screen {
       .ser .card.other figure {
         margin-left: 0;
         margin-right: 0; }
-      .ser .card.other article > .content:first-child {
-        padding-top: 87px; }
     .ser .card.facebook {
       color: black; }
       .ser .card.facebook time {
