@@ -2,7 +2,7 @@
 {% set networkData = _Network.getNetworkData() %}
 
 {{this.registerJs("HomeController.listing();")}}
-{% set limit = 14 %}
+{% set limit = 30 %}
 
 {% set articlesArr = _Blog.getBlogFeed({'limit': limit, 'offset': 0}) %}
 {% set articles = articlesArr.articles %}
@@ -182,23 +182,23 @@
                     <section class="row top-stories-sidebar">
                         {% if sections['Social'].feed.articles|length > 0 %}
 
-                    <section class="aap-news">
-                        
-                      <h2 style="font-size:1.125rem;margin-top:0;">SOCIAL FEED</h2>
+                            <section class="aap-news">
+                                
+                              <h2 style="font-size:1.125rem;margin-top:0;">SOCIAL FEED</h2>
 
 
-                        {# <a href ="{{ sections['Breaking News'].link }}"><h2>BREAKING NEWS</h2></a> #}
-                        {# <p>FROM <img src="{{networkData.templatePath}}/static/images/aap.jpg"></p> #}
+                                {# <a href ="{{ sections['Breaking News'].link }}"><h2>BREAKING NEWS</h2></a> #}
+                                {# <p>FROM <img src="{{networkData.templatePath}}/static/images/aap.jpg"></p> #}
 
-                        {% for i in 0..5 %}
-                            {% if sections['Social'].feed.articles[i] %}
-                                {{this.render('partials/_single-article.twig', {article: sections['Social'].feed.articles[i], containerClass: 'col-sm-6 col-md-12'}) | raw}}
-                            {% endif %}
-                        {% endfor %}
+                                {% for i in 0..5 %}
+                                    {% if sections['Social'].feed.articles[i] %}
+                                        {{this.render('partials/_single-article.twig', {article: sections['Social'].feed.articles[i], containerClass: 'col-sm-6 col-md-12'}) | raw}}
+                                    {% endif %}
+                                {% endfor %}
 
-                        <a href="{{ sections['Social'].link }}" class="viewmore">VIEW MORE</a>
-                    </section>
-                    {% endif %}
+                                <a href="{{ sections['Social'].link }}" class="viewmore">VIEW MORE</a>
+                            </section>
+                        {% endif %}
 
                     </section>
                 </aside>
