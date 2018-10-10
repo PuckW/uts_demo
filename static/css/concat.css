@@ -12247,6 +12247,12 @@ body.search #masthead {
       .page-channel .follow {
         margin-top: 15px; } }
 
+.section .site-header {
+  background-color: #231f20;
+  margin-top: 0; }
+  .section .site-header.stick {
+    height: 70px; }
+
 .site-footer {
   background-color: #000000;
   color: #fefefe; }
