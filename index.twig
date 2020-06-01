@@ -117,7 +117,7 @@
 
                         <section class="aap-news">
                             
-                          <h2 style="font-size:1.125rem;margin-top:0;">EDITORS PICKS</h2>
+                          <h2 style="font-size:1.125rem;margin-top:0;">EDITOR'S PICKS</h2>
                             {% for i in 0..5 %}
                                 {% if articles[articleCount] %}
                                     {{this.render('partials/_single-article.twig', {article: articles[articleCount], 'position': (articleCount+1), containerClass: 'col-sm-6 col-md-12'}) | raw}}
